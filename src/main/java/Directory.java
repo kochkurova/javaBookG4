@@ -7,14 +7,14 @@ public class Directory {
     boolean married;
     boolean haveСhildren;
 
-    public void identity (String idenName, String idenSurname, int idenAge, sex idenSex, String idenHobby, boolean idenMarried, boolean idenHaveChildren) {
-        name = idenName;
-        surname = idenSurname;
-        age = idenAge;
-        sex = idenSex;
-        hobby = idenHobby;
-        married = idenMarried;
-        haveСhildren = idenHaveChildren;
+    Directory (String conName, String conSurname, int conAge, sex conSex, String conHobby, boolean conMarried, boolean conHaveChildren) {
+        name = conName;
+        surname = conSurname;
+        age = conAge;
+        sex = conSex;
+        hobby = conHobby;
+        married = conMarried;
+        haveСhildren = conHaveChildren;
 
     }
 
@@ -25,6 +25,22 @@ public class Directory {
 
         else
             return 0;
+    }
+
+    public int ifMale () {
+        if (sex == sex.male)
+            return 1;
+        return 0;
+    }
+
+    public void sexChange () {
+        if (sex == sex.male)
+            sex = sex.female;
+
+        else if (sex == sex.female)
+            sex = sex.male;
+
+
     }
 
     public int ageReturn () {
